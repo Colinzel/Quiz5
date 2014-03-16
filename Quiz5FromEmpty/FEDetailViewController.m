@@ -26,6 +26,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.nameTextField setText:[_task taskName]];
+    self.urgencySlider.value = [_task urgency];
+    [self.urgencyLabel setText:[NSString stringWithFormat:@"Urgency: %.2f",[_task urgency]]];
+    self.datePicker.date = [_task dueDate];
+    
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -36,5 +41,14 @@
 }
 
 - (IBAction)save:(id)sender {
+    _task.taskName = self.nameTextField.text;
+    _task.urgency = self.urgencySlider.value;
+    _task.dueDate = [self.datePicker date];
+    [self.navigationController popViewControllerAnimated:YES];
 }
+
+- (IBAction)sliderChanged:(UISlider *)sender {
+    [self.urgencyLabel setText:[NSString stringWithFormat:@"Urgency:%.2f",self.urgencySlider.value]];
+}
+
 @end

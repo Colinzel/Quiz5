@@ -8,6 +8,7 @@
 
 #import "FEViewController.h"
 #import "FETask.h"
+#import "FEDetailViewController.h"
 
 @interface FEViewController ()
 
@@ -50,6 +51,7 @@
         FETask *t2 = obj2;
         return [t1.dueDate compare:t2.dueDate];
     }];
+    [self.tableView reloadData];
 }
 - (void)didReceiveMemoryWarning
 {
@@ -96,6 +98,11 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    FEDetailViewController *dvc = [[FEDetailViewController alloc] initWithNibName:nil bundle:nil];
+    dvc.task = [tasks objectAtIndex:[[self.tableView indexPathForSelectedRow] row]];
+    [self.navigationController pushViewController:dvc animated:YES];
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
