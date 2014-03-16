@@ -19,6 +19,8 @@
 		A44CEFC718D5B2C900EB60A2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A44CEFAF18D5B2C700EB60A2 /* UIKit.framework */; };
 		A44CEFCF18D5B2C900EB60A2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A44CEFCD18D5B2C900EB60A2 /* InfoPlist.strings */; };
 		A44CEFD118D5B2C900EB60A2 /* Quiz5FromEmptyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A44CEFD018D5B2C900EB60A2 /* Quiz5FromEmptyTests.m */; };
+		A44CEFDC18D5C3EC00EB60A2 /* FEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A44CEFDB18D5C3EC00EB60A2 /* FEViewController.m */; };
+		A44CEFDF18D5C4CB00EB60A2 /* FETask.m in Sources */ = {isa = PBXBuildFile; fileRef = A44CEFDE18D5C4CB00EB60A2 /* FETask.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,10 @@
 		A44CEFCC18D5B2C900EB60A2 /* Quiz5FromEmptyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Quiz5FromEmptyTests-Info.plist"; sourceTree = "<group>"; };
 		A44CEFCE18D5B2C900EB60A2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A44CEFD018D5B2C900EB60A2 /* Quiz5FromEmptyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Quiz5FromEmptyTests.m; sourceTree = "<group>"; };
+		A44CEFDA18D5C3EC00EB60A2 /* FEViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FEViewController.h; sourceTree = "<group>"; };
+		A44CEFDB18D5C3EC00EB60A2 /* FEViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FEViewController.m; sourceTree = "<group>"; };
+		A44CEFDD18D5C4CB00EB60A2 /* FETask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FETask.h; sourceTree = "<group>"; };
+		A44CEFDE18D5C4CB00EB60A2 /* FETask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FETask.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +115,10 @@
 			children = (
 				A44CEFBA18D5B2C800EB60A2 /* FEAppDelegate.h */,
 				A44CEFBB18D5B2C800EB60A2 /* FEAppDelegate.m */,
+				A44CEFDA18D5C3EC00EB60A2 /* FEViewController.h */,
+				A44CEFDB18D5C3EC00EB60A2 /* FEViewController.m */,
+				A44CEFDD18D5C4CB00EB60A2 /* FETask.h */,
+				A44CEFDE18D5C4CB00EB60A2 /* FETask.m */,
 				A44CEFBD18D5B2C900EB60A2 /* Images.xcassets */,
 				A44CEFB218D5B2C800EB60A2 /* Supporting Files */,
 			);
@@ -241,7 +251,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A44CEFB818D5B2C800EB60A2 /* main.m in Sources */,
+				A44CEFDF18D5C4CB00EB60A2 /* FETask.m in Sources */,
 				A44CEFBC18D5B2C800EB60A2 /* FEAppDelegate.m in Sources */,
+				A44CEFDC18D5C3EC00EB60A2 /* FEViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
