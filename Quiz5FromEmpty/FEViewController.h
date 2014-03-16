@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FEViewController : UITableViewController
+@interface FEViewController : UITableViewController {
+    NSMutableArray *tasks;
+}
 
 @end

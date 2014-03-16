@@ -7,6 +7,7 @@
 //
 
 #import "FEViewController.h"
+#import "FETask.h"
 
 @interface FEViewController ()
 
@@ -26,12 +27,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    [self setTitle:@"My Tasks"];
+    tasks = [[NSMutableArray alloc] init];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    for (int i=0; i<10; i++) {
+        FETask *task = [[FETask alloc] init];
+        [task setTaskName:[NSString stringWithFormat:@"Task %d",i]];
+        [task setUrgency:i];
+        [task setDueDate:[NSDate dateWithTimeIntervalSinceNow:i*60.0*60.0*24.0]];
+        [tasks addObject:task];
+    }
 }
 
 - (void)didReceiveMemoryWarning
