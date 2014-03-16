@@ -7,13 +7,16 @@
 //
 
 #import "FEAppDelegate.h"
-
+#import "FEViewController.h"
 @implementation FEAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:[[FEViewController alloc] init]];
+
     // Override point for customization after application launch.
+    [self.window setRootViewController:nc];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

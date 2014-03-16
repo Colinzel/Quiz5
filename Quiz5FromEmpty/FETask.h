@@ -9,5 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface FETask : NSObject
-
+@property (nonatomic) float urgency;
+@property (nonatomic, retain) NSDate *dueDate;
+@property (nonatomic, retain) NSString *taskName;
 @end
