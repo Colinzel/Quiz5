@@ -22,6 +22,8 @@
 		A44CEFDC18D5C3EC00EB60A2 /* FEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A44CEFDB18D5C3EC00EB60A2 /* FEViewController.m */; };
 		A44CEFDF18D5C4CB00EB60A2 /* FETask.m in Sources */ = {isa = PBXBuildFile; fileRef = A44CEFDE18D5C4CB00EB60A2 /* FETask.m */; };
 		A44CEFE118D5CFE100EB60A2 /* urgent.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A44CEFE018D5CFE100EB60A2 /* urgent.jpg */; };
+		A44CEFE518D5D46100EB60A2 /* FEDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A44CEFE318D5D46100EB60A2 /* FEDetailViewController.m */; };
+		A44CEFE618D5D46100EB60A2 /* FEDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A44CEFE418D5D46100EB60A2 /* FEDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,9 @@
 		A44CEFDD18D5C4CB00EB60A2 /* FETask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FETask.h; sourceTree = "<group>"; };
 		A44CEFDE18D5C4CB00EB60A2 /* FETask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FETask.m; sourceTree = "<group>"; };
 		A44CEFE018D5CFE100EB60A2 /* urgent.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = urgent.jpg; sourceTree = "<group>"; };
+		A44CEFE218D5D46100EB60A2 /* FEDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FEDetailViewController.h; sourceTree = "<group>"; };
+		A44CEFE318D5D46100EB60A2 /* FEDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FEDetailViewController.m; sourceTree = "<group>"; };
+		A44CEFE418D5D46100EB60A2 /* FEDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FEDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +124,9 @@
 				A44CEFBB18D5B2C800EB60A2 /* FEAppDelegate.m */,
 				A44CEFDA18D5C3EC00EB60A2 /* FEViewController.h */,
 				A44CEFDB18D5C3EC00EB60A2 /* FEViewController.m */,
+				A44CEFE218D5D46100EB60A2 /* FEDetailViewController.h */,
+				A44CEFE318D5D46100EB60A2 /* FEDetailViewController.m */,
+				A44CEFE418D5D46100EB60A2 /* FEDetailViewController.xib */,
 				A44CEFDD18D5C4CB00EB60A2 /* FETask.h */,
 				A44CEFDE18D5C4CB00EB60A2 /* FETask.m */,
 				A44CEFE018D5CFE100EB60A2 /* urgent.jpg */,
@@ -233,6 +241,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A44CEFE618D5D46100EB60A2 /* FEDetailViewController.xib in Resources */,
 				A44CEFE118D5CFE100EB60A2 /* urgent.jpg in Resources */,
 				A44CEFB618D5B2C800EB60A2 /* InfoPlist.strings in Resources */,
 				A44CEFBE18D5B2C900EB60A2 /* Images.xcassets in Resources */,
@@ -255,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A44CEFB818D5B2C800EB60A2 /* main.m in Sources */,
+				A44CEFE518D5D46100EB60A2 /* FEDetailViewController.m in Sources */,
 				A44CEFDF18D5C4CB00EB60A2 /* FETask.m in Sources */,
 				A44CEFBC18D5B2C800EB60A2 /* FEAppDelegate.m in Sources */,
 				A44CEFDC18D5C3EC00EB60A2 /* FEViewController.m in Sources */,
