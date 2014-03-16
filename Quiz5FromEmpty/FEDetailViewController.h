@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "FETask.h"
 
-@interface FEDetailViewController : UIViewController
+@interface FEDetailViewController : UIViewController <UITextFieldDelegate>
 - (IBAction)save:(id)sender;
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 @property (weak, nonatomic) IBOutlet UISlider *urgencySlider;

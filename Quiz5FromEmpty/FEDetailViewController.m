@@ -14,6 +14,10 @@
 
 @implementation FEDetailViewController
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
+}
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -26,6 +30,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.nameTextField setDelegate:self];
     [self.nameTextField setText:[_task taskName]];
     self.urgencySlider.value = [_task urgency];
     [self.urgencyLabel setText:[NSString stringWithFormat:@"Urgency: %.2f",[_task urgency]]];

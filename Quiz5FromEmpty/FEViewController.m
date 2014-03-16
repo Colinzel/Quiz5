@@ -100,7 +100,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     FEDetailViewController *dvc = [[FEDetailViewController alloc] initWithNibName:nil bundle:nil];
-    dvc.task = [tasks objectAtIndex:[[self.tableView indexPathForSelectedRow] row]];
+    dvc.task = [tasks objectAtIndex:[indexPath row]];
     [self.navigationController pushViewController:dvc animated:YES];
 }
 /*
