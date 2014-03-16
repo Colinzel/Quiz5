@@ -29,6 +29,7 @@
     [super viewDidLoad];
     [self setTitle:@"My Tasks"];
     tasks = [[NSMutableArray alloc] init];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -43,6 +44,13 @@
     }
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [tasks sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        FETask *t1=obj1;
+        FETask *t2 = obj2;
+        return [t1.dueDate compare:t2.dueDate];
+    }];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -53,25 +61,32 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [tasks count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
+    cell = [cell initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"Cell"];
     // Configure the cell...
-    
+    FETask *t = [tasks objectAtIndex:[indexPath row]];
+    [cell.textLabel setText:[t taskName]];
+    NSDateFormatter *df = [[NSDateFormatter alloc] init];
+    [df setDateStyle:NSDateFormatterLongStyle];
+    [cell.detailTextLabel setText:[df stringFromDate:t.dueDate]];
+    if (t.urgency > 6) {
+        [[cell imageView] setImage:[UIImage imageNamed:@"urgent.jpg"]];
+    } else {
+        [[cell imageView] setImage: nil];
+    }
     return cell;
 }
 
