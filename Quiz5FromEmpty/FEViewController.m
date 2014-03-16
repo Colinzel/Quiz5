@@ -79,6 +79,12 @@
     // Configure the cell...
     FETask *t = [tasks objectAtIndex:[indexPath row]];
     [cell.textLabel setText:[t taskName]];
+    UIColor *taskColor = [UIColor colorWithRed:t.urgency/10.0 green:1.0-(t.urgency/10.0) blue:0.0 alpha:0.5];
+    [cell.contentView setBackgroundColor:taskColor];
+    [cell.detailTextLabel setBackgroundColor:[UIColor clearColor]];
+    [cell.textLabel setBackgroundColor:[UIColor clearColor]];
+    [cell.imageView setBackgroundColor:taskColor];
+    
     NSDateFormatter *df = [[NSDateFormatter alloc] init];
     [df setDateStyle:NSDateFormatterLongStyle];
     [cell.detailTextLabel setText:[df stringFromDate:t.dueDate]];
